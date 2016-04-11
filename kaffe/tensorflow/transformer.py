@@ -110,6 +110,9 @@ class TensorFlowMapper(NodeMapper):
     def map_softmax(self, node):
         return TensorFlowNode('softmax')
 
+    def map_sigmoid(self, node):
+        return TensorFlowNode('sigmoid')
+
     def map_lrn(self, node):
         params = node.parameters
         # The window size must be an odd value. For a window

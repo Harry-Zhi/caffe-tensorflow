@@ -153,6 +153,10 @@ class Network(object):
             return fc
 
     @layer
+    def sigmoid(self, input, name):
+        return tf.nn.sigmoid(input, name)
+
+    @layer
     def softmax(self, input, name):
         return tf.nn.softmax(input, name)
 
